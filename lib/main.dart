@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,6 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
     new Timer.periodic(oneSec, (Timer t) => fetchNumber());
   }
 
+  void _theCaller() {
+    const oneSec = const Duration(seconds:1);
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -109,13 +114,19 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_number',
               style: Theme.of(context).textTheme.display1,
             ),
+            RaisedButton(
+              child: Icon(Icons.phone),
+              onPressed: () {
+                launch("tel://"+'$_number');
+              },
+            ), //Button
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _theBouncer,
         tooltip: 'Increment',
-        child: Icon(Icons.phone),
+        child: Icon(Icons.adjust),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
