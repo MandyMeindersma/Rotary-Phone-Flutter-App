@@ -1,8 +1,8 @@
-# rotary_phone
+# Rotary Phone Flutter App
 
-An app that will call the number from my rotary phone
+An app that will call the number that I have dialed from an old Rotary phone. It makes a call to my [Back End](https://repl.it/@MandyMeindersma/Rotary-Phone) which has the number saved and then calls that number. I have photos and a description of this project on my [personal website](https://www.mandymeindersma.com/).
 
-## Getting Started
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
@@ -15,6 +15,6 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Mandy's Tips:
+#### Mandy's Tips:
 - flutter build apk --split-per-abi (to build apk)
 - <app dir>/build/app/outputs/apk/release/app-armeabi-v7a-release.apk (where it is located)
